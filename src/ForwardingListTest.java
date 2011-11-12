@@ -11,9 +11,6 @@ public class ForwardingListTest {
 	@Before public void setUp(){
 		stringLinkedList = new LinkedList<String>();
 		stringList = new ForwardingList<String>(stringLinkedList);
-
-		
-		System.out.println(stringList.isEmpty());
 	}
 	
 	
@@ -35,12 +32,17 @@ public class ForwardingListTest {
 
 	@Test
 	public void testClear() {
-		fail("Not yet implemented");
+		//TODO Add more elements
+		stringList.add("test");
+		assertFalse(stringList.isEmpty());//Make sure there are elements
+		stringList.clear();
+		assertTrue(stringList.isEmpty());//Make sure there are no more elemnts
+		
 	}
 
 	@Test
 	public void testContains() {
-		
+		//TODO : Ensure empty start
 		//System.out.println(stringList.isEmpty());
 		System.out.println(stringList.get(0));
 		stringList.add("one");
