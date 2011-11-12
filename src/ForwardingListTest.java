@@ -36,6 +36,7 @@ public class ForwardingListTest {
 		stringList.add("test");
 		assertFalse(stringList.isEmpty());//Make sure there are elements
 		stringList.clear();
+		
 		assertTrue(stringList.isEmpty());//Make sure there are no more elemnts
 		
 	}
@@ -43,16 +44,20 @@ public class ForwardingListTest {
 	@Test
 	public void testContains() {
 		//TODO : Ensure empty start
-		//System.out.println(stringList.isEmpty());
-		System.out.println(stringList.get(0));
-		stringList.add("one");
-		stringList.add("two");
-		stringList.add("three");
+		assertTrue(stringList.isEmpty());
+		System.out.println(stringList.isEmpty());
+		//System.out.println(stringList.get(0));
+		stringList.add("one");//one
+		stringList.add("two");//one, two
+		stringList.add("three");//one,two,three
 		assertTrue(stringList.contains("one"));
 		assertTrue(stringList.contains("two"));
 		assertTrue(stringList.contains("three"));
-		System.out.println(stringList.get(3));
-		//stringList.remove(2);//Remove Three
+		stringList.remove(1);//one, three
+		
+		System.out.println(stringList.get(0));
+		System.out.println("two::::");
+		assertFalse(stringList.contains("two"));
 
 
 	}
