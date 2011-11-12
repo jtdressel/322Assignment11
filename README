@@ -1,0 +1,20 @@
+CS/SWE 332 Assignment 11
+Due Thursday, November 17, 2011
+
+Goal: Favoring composition over inheritance. Bloch, Item 16.
+
+Submit via Blackboard.
+Assignment: Using Bloch's ForwardingSet and InstrumentedSet (page 84) examples as models, implement corresponding classes ForwardingList and InstrumentedList. You should keep the generics. In other words, you are to use the List interface in place of the Set interface.
+
+It doesn't matter what your InstrumentedList does for instrumentation. You can do what Bloch does, or you can try some variant.
+
+Provide a robust set of JUnit tests to show that the equals() and hashCode() methods adhere to their contracts. You do not need to test any other part of the List interface.
+
+Bonus: (2 points): Repeat the exercise, replacing List with Collection. One of your JUnit tests will fail. (Either that, or your JUnit tests need some attention...). Explain what is wrong.
+
+Grading Criteria:
+
+    ForwardingList
+    InstrumentedList
+    Generics (this is easy)
+    JUnit tests for equals() and hashCode(). 
