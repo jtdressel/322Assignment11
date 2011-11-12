@@ -41,8 +41,7 @@ public class ForwardingList<E> implements List<E>{
 
 	@Override
 	public void clear() {
-		// TODO Auto-generated method stub
-		
+		l.clear();
 	}
 
 	@Override
@@ -60,7 +59,7 @@ public class ForwardingList<E> implements List<E>{
 	@Override
 	public E get(int index) {
 		// TODO Auto-generated method stub
-		return null;
+		return l.get(index);
 	}
 
 	@Override
@@ -72,7 +71,7 @@ public class ForwardingList<E> implements List<E>{
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return false;
+		return l.isEmpty();
 	}
 
 	@Override
@@ -101,14 +100,14 @@ public class ForwardingList<E> implements List<E>{
 
 	@Override
 	public boolean remove(Object o) {
-		// TODO Auto-generated method stub
-		return false;
+		return l.remove(o);
+		
 	}
 
 	@Override
 	public E remove(int index) {
 		// TODO Auto-generated method stub
-		return null;
+		return l.remove(index);
 	}
 
 	@Override
