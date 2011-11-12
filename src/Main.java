@@ -18,6 +18,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Set<String> s = new InstrumentedSet<String>(new HashSet<String>(4));
 		InstrumentedSet<String> i = (InstrumentedSet<String>)s;
+		System.out.println(i.contains("test"));
 		s.add("test");
 		
 		
@@ -26,7 +27,8 @@ public class Main {
 		
 		
 		System.out.println(s.toString());
-		System.out.println(i.getAddCount());
+		System.out.println(i.contains("test"));
+		
 	}
 
 }
