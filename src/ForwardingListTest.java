@@ -1,0 +1,158 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.Before;
+import java.util.List;
+import java.util.LinkedList;
+
+public class ForwardingListTest {
+	private List<String> stringLinkedList;
+	private ForwardingList<String> stringList;
+	
+	@Before public void setUp(){
+		stringLinkedList = new LinkedList<String>();
+		stringList = new ForwardingList<String>(stringLinkedList);
+
+		
+		System.out.println(stringList.isEmpty());
+	}
+	
+	
+	@Test
+	public void testAddIntE() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddAllCollectionOfQextendsE() {
+		
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAddAllIntCollectionOfQextendsE() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testClear() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testContains() {
+		
+		//System.out.println(stringList.isEmpty());
+		System.out.println(stringList.get(0));
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		assertTrue(stringList.contains("one"));
+		assertTrue(stringList.contains("two"));
+		assertTrue(stringList.contains("three"));
+		System.out.println(stringList.get(3));
+		//stringList.remove(2);//Remove Three
+
+
+	}
+
+	@Test
+	public void testContainsAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testGet() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testIndexOf() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testIsEmpty() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testIterator() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testLastIndexOf() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testListIterator() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testListIteratorInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemoveObject() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemoveInt() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRemoveAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testRetainAll() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSet() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSize() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSubList() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testToArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testToArrayTArray() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testHashCode() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testEquals() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testToString() {
+		fail("Not yet implemented");
+	}
+
+}
