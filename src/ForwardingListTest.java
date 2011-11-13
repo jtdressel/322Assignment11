@@ -227,7 +227,16 @@ public class ForwardingListTest {
 
 	@Test
 	public void testSet() {
-		fail("Not yet implemented");
+		stringList.add("one");
+		stringList.add("one");
+		stringList.add("three");
+		stringList.add("four");
+		assertEquals("one",stringList.get(1));//currently "one"
+		stringList.set(1, "two");
+		assertEquals("two",stringList.get(1));//Should have been changed to "two"
+		
+		
+		
 	}
 
 	@Test
