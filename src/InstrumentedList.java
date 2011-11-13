@@ -30,6 +30,6 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	}
 	
 	public int getAddCount(){
-		return 0;//TODO
+		return addCount;
 	}
 }
