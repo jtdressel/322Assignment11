@@ -25,8 +25,16 @@ public class ForwardingListTest {
 
 	@Test
 	public void testAddAllCollectionOfQextendsE() {
+		LinkedList<String> newList = new LinkedList<String>();
+		newList.add("one");
+		newList.add("two");
+		newList.add("three");
+		newList.add("four");
+		assertFalse(stringList.containsAll(newList));
 		
-		fail("Not yet implemented");
+		stringList.addAll(newList);
+		assertTrue(stringList.containsAll(newList));
+		
 	}
 
 	@Test
