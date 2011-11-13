@@ -51,7 +51,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		return l.addAll(index, c);
+		return false;
 	}
 
 	/**
@@ -77,8 +77,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return l.containsAll(c);
 	}
 
 	/**
