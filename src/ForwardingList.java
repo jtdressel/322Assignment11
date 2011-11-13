@@ -17,7 +17,8 @@ public class ForwardingList<E> implements List<E>{
 	
 //TODO Ask about override notation
 	/**
-	 * 
+	 * Appends the specified element to the end of this list (optional operation)
+	 * @return false if operation is unsucessful
 	 */
 	@Override
 	public boolean add(E e) {
@@ -26,7 +27,7 @@ public class ForwardingList<E> implements List<E>{
 
 	@Override
 	public void add(int index, E element) {
-		// TODO Auto-generated method stub
+		l.add(index, E);
 		
 	}
 
