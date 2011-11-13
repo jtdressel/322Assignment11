@@ -115,7 +115,15 @@ public class ForwardingListTest {
 
 	@Test
 	public void testIndexOf() {
-		fail("Not yet implemented");
+		assertEquals(-1,stringList.indexOf("one"));//"one" is not in stringList
+		stringList.add("one");
+		assertEquals(0, stringList.indexOf("one"));//one is in index 0
+		stringList.add("two");
+		stringList.add("three");
+		assertEquals(1, stringList.indexOf("two"));
+		
+		
+		
 	}
 
 	@Test
