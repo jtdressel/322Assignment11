@@ -281,7 +281,11 @@ public class ForwardingListTest {
 
 	@Test
 	public void testToString() {
-		fail("Not yet implemented");
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		assertEquals("[one, two, three]", stringList.toString());
+		
 	}
 
 }
