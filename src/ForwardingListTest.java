@@ -122,13 +122,15 @@ public class ForwardingListTest {
 		stringList.add("three");
 		assertEquals(1, stringList.indexOf("two"));
 		
-		
-		
 	}
 
 	@Test
 	public void testIsEmpty() {
-		fail("Not yet implemented");
+		assertTrue(stringList.isEmpty());//Nothing in list to begin with
+		stringList.add("one");
+		assertFalse(stringList.isEmpty());//Now there is one element, not empty
+		stringList.remove("one");
+		assertTrue(stringList.isEmpty());
 	}
 
 	@Test
