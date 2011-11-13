@@ -16,7 +16,11 @@ public class ForwardingListTest {
 	
 	@Test
 	public void testAddIntE() {
-		fail("Not yet implemented");
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		stringList.add(2, "test");
+		assertEquals("test",stringList.get(2));
 	}
 
 	@Test
