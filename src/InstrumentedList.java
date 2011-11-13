@@ -13,7 +13,8 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	}
 	
 	@Override public boolean add(E e){
-		return false;//TODO 
+		addCount++;
+		return super.add(e);
 	}
 	
 	@Override public boolean addAll(Collection <? extends E> c){
