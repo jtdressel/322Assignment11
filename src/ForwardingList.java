@@ -51,7 +51,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		return false;
+		return l.addAll(index, c);
 	}
 
 	/**
@@ -131,8 +131,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public ListIterator<E> listIterator() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return l.listIterator();
 	}
 
 	/**
@@ -141,8 +141,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public ListIterator<E> listIterator(int index) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return l.listIterator(index);
 	}
 	
 	/**
@@ -217,7 +217,7 @@ public class ForwardingList<E> implements List<E>{
 	@Override
 	public Object[] toArray() {
 		// TODO Auto-generated method stub
-		return null;
+		return l.toArray();
 	}
 	/**
 	 * Returns an array containing all of the elements in this list in proper sequence (from first to last element); the runtime type of the returned array is that of the specified array.
