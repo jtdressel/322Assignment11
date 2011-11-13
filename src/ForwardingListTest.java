@@ -155,6 +155,7 @@ public class ForwardingListTest {
 
 	@Test
 	public void testRemoveObject() {
+		assertTrue(stringList.isEmpty());
 		assertFalse(stringList.contains("one"));
 		stringList.add("one");
 		stringList.add("two");
@@ -169,7 +170,19 @@ public class ForwardingListTest {
 
 	@Test
 	public void testRemoveInt() {
-		fail("Not yet implemented");
+		assertTrue(stringList.isEmpty());
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		//one, two three
+		stringList.remove(1);//test remove in middle
+		//one, three
+		assertFalse(stringList.contains("two"));
+		stringList.remove(1);//test remove at end
+		assertFalse(stringList.contains("three"));
+		stringList.remove(0);//test remove at beginning
+		assertFalse(stringList.contains("one"));
+		
 	}
 
 	@Test
