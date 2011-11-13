@@ -181,8 +181,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public boolean retainAll(Collection<?> c) {
-		// TODO Auto-generated method stub
-		return false;
+	
+		return l.retainAll(c);
 	}
 
 	/**
