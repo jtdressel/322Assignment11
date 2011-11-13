@@ -193,7 +193,7 @@ public class ForwardingList<E> implements List<E>{
 	@Override
 	public E set(int index, E element) {
 		// TODO Auto-generated method stub
-		return null;
+		return l.set(index, element);
 	}
 	/**
 	 * Returns the number of elements in this list.
