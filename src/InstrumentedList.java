@@ -18,7 +18,8 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	}
 	
 	@Override public boolean addAll(Collection <? extends E> c){
-		return false; //TODO
+		addCount += c.size();
+		return super.addAll(c); 
 	}
 	@Override
 	public void add(int index, E element) {
