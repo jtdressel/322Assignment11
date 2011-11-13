@@ -261,7 +261,17 @@ public class ForwardingListTest {
 
 	@Test
 	public void testToArray() {
-		fail("Not yet implemented");
+		stringList.add("zero");
+		stringList.add("one");
+		stringList.add("two");
+		
+		Object[] testArray = new Object[3]; 
+		testArray[0]= "zero";
+		testArray[1]= "one";
+		testArray[2]= "two";
+		
+		assertEquals(testArray,stringList.toArray());
+		
 	}
 
 	@Test
