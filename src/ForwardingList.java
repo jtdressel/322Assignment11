@@ -228,5 +228,23 @@ public class ForwardingList<E> implements List<E>{
 		
 		return l.toArray(a);
 	}
+	
+	@Override
+	public String toString(){
+		return l.toString();
+		
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		return false;//TODO
+	}
+	
+	@Override
+	public int hashCode(){
+		return 42;
+	}
+	
+	
 
 }
