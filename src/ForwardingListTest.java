@@ -39,7 +39,22 @@ public class ForwardingListTest {
 
 	@Test
 	public void testAddAllIntCollectionOfQextendsE() {
-		fail("Not yet implemented");
+		LinkedList<String> newList = new LinkedList<String>();
+		newList.add("one");
+		newList.add("two");
+		newList.add("three");
+		newList.add("four");
+		assertFalse(stringList.containsAll(newList));
+		
+		stringList.add("a");
+		stringList.addAll(0,newList);
+		assertEquals(stringList.get(4), "a");//the first element is moved to the end
+		
+		assertTrue(stringList.containsAll(newList));//make sure all are added
+		
+		
+		
+		
 	}
 
 	@Test
@@ -57,8 +72,6 @@ public class ForwardingListTest {
 	public void testContains() {
 		//TODO : Ensure empty start
 		assertTrue(stringList.isEmpty());
-		System.out.println(stringList.isEmpty());
-		//System.out.println(stringList.get(0));
 		stringList.add("one");//one
 		stringList.add("two");//one, two
 		stringList.add("three");//one,two,three
@@ -67,8 +80,6 @@ public class ForwardingListTest {
 		assertTrue(stringList.contains("three"));
 		stringList.remove(1);//one, three
 		
-		System.out.println(stringList.get(0));
-		System.out.println("two::::");
 		assertFalse(stringList.contains("two"));
 
 
@@ -76,12 +87,30 @@ public class ForwardingListTest {
 
 	@Test
 	public void testContainsAll() {
-		fail("Not yet implemented");
+		
+		LinkedList<String> newList = new LinkedList<String>();
+		newList.add("one");
+		newList.add("two");
+		newList.add("three");
+		newList.add("four");
+		assertFalse(stringList.containsAll(newList));
+		
+		stringList.addAll(newList);
+		
+		assertTrue(stringList.containsAll(newList));//make sure all are added
+		
+		
+		
 	}
 
 	@Test
 	public void testGet() {
-		fail("Not yet implemented");
+		stringList.add("zero");
+		stringList.add("one");
+		stringList.add("two");
+		assertEquals("zero",stringList.get(0));
+		assertEquals("one",stringList.get(1));
+		assertEquals("two",stringList.get(2));
 	}
 
 	@Test
