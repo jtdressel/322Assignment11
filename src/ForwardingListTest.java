@@ -257,12 +257,37 @@ public class ForwardingListTest {
 
 	@Test
 	public void testHashCode() {
-		fail("Not yet implemented");
+		stringList.add("one");
+		
+		LinkedList<String> testLink = new LinkedList<String>();
+		ForwardingList<String> list = new ForwardingList<String>(testLink);
+		
+		list.add("one");//both stringList and list contain only one
+		
+		assertTrue(list.equals(stringList));
+		assertEquals(list.hashCode(),stringList.hashCode());//If equal hashcode should be equal
 	}
 
 	@Test
 	public void testEquals() {
-		fail("Not yet implemented");
+		
+		LinkedList<String> testLink = new LinkedList<String>();
+		ForwardingList<String> list = new ForwardingList<String>(testLink);
+
+		LinkedList<String> testTwoLink = new LinkedList<String>();
+		ForwardingList<String> listTwo = new ForwardingList<String>(testTwoLink);
+		
+		stringList.add("one");
+		listTwo.add("one");
+		list.add("one");
+		assertTrue(stringList.equals(list));
+		assertTrue(list.equals(stringList));//Symmetric
+		assertTrue(list.equals(listTwo));
+		assertTrue(stringList.equals(listTwo));//transitive
+		
+		
+		
+		assertTrue(list.equals(stringList));
 	}
 
 	@Test
