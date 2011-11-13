@@ -172,7 +172,7 @@ public class ForwardingList<E> implements List<E>{
 	@Override
 	public boolean removeAll(Collection<?> c) {
 		// TODO Auto-generated method stub
-		return false;
+		return l.removeAll(c);
 	}
 
 	/**
