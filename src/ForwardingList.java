@@ -209,8 +209,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public List<E> subList(int fromIndex, int toIndex) {
-		// TODO Auto-generated method stub
-		return null;
+		return l.subList(fromIndex, toIndex);
 	}
 	/**
 	 * Returns an array containing all of the elements in this list in proper sequence (from first to last element).
