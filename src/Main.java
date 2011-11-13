@@ -29,6 +29,12 @@ public class Main {
 		System.out.println(s.toString());
 		System.out.println(i.contains("test"));
 		
+		
+		ForwardingSet<String> test = new ForwardingSet<String> (s);
+		test.add("blas");
+		System.out.println(test);
+		
+		
 	}
 
 }
