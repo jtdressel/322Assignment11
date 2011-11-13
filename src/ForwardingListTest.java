@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.LinkedList;
 import java.util.HashSet;
 
-
+//TODO: Consider how to test iterators
 public class ForwardingListTest {
 	private List<String> stringLinkedList;
 	private ForwardingList<String> stringList;
@@ -136,11 +136,6 @@ public class ForwardingListTest {
 	}
 
 	@Test
-	public void testIterator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testLastIndexOf() {
 		stringList.add("one");
 		stringList.add("two");
@@ -148,15 +143,6 @@ public class ForwardingListTest {
 		assertEquals(2, stringList.lastIndexOf("one"));
 	}
 
-	@Test
-	public void testListIterator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testListIteratorInt() {
-		fail("Not yet implemented");
-	}
 
 	@Test
 	public void testRemoveObject() {
