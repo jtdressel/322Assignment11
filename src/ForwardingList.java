@@ -230,8 +230,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public <T> T[] toArray(T[] a) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return l.toArray(a);
 	}
 
 }
