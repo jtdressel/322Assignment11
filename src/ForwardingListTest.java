@@ -202,7 +202,27 @@ public class ForwardingListTest {
 
 	@Test
 	public void testRetainAll() {
-		fail("Not yet implemented");
+		HashSet<String> set = new HashSet<String>();
+		set.add("one");
+		set.add("two");
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("other");
+		stringList.add("blah");
+
+		assertTrue(stringList.contains("one"));
+		assertTrue(stringList.contains("two"));
+		assertTrue(stringList.contains("other"));
+		assertTrue(stringList.contains("blah"));
+		
+		stringList.retainAll(set);//keep one and two, remove others
+		
+		assertTrue(stringList.contains("one"));
+		assertTrue(stringList.contains("two"));
+		assertFalse(stringList.contains("other"));
+		assertFalse(stringList.contains("blah"));
+		
+		
 	}
 
 	@Test
