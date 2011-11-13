@@ -23,7 +23,8 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	}
 	@Override
 	public void add(int index, E element) {
-		//TODO
+		addCount++;
+		super.add(index, element);
 	}
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
