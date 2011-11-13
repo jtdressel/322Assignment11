@@ -51,8 +51,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		// TODO Auto-generated method stub
-		return false;
+		return l.addAll(index, c);
 	}
 
 	/**
