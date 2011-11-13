@@ -28,8 +28,8 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	}
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		//TODO
-		return false;
+		addCount += c.size();
+		return super.addAll(index, c);
 	}
 	
 	public int getAddCount(){
