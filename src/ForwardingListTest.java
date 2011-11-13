@@ -3,6 +3,8 @@ import org.junit.Test;
 import org.junit.Before;
 import java.util.List;
 import java.util.LinkedList;
+import java.util.HashSet;
+
 
 public class ForwardingListTest {
 	private List<String> stringLinkedList;
@@ -187,7 +189,15 @@ public class ForwardingListTest {
 
 	@Test
 	public void testRemoveAll() {
-		fail("Not yet implemented");
+		HashSet<String> set = new HashSet<String>();
+		set.add("one");
+		set.add("two");
+		stringList.add("one");
+		stringList.add("two");
+		assertFalse(stringList.isEmpty());
+		stringList.removeAll(set);
+		assertTrue(stringList.isEmpty());
+	
 	}
 
 	@Test
