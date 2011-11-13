@@ -97,8 +97,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public int indexOf(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+		return l.indexOf(o);
 	}
 
 	/**
