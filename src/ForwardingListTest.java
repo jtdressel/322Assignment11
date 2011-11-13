@@ -142,7 +142,10 @@ public class ForwardingListTest {
 
 	@Test
 	public void testLastIndexOf() {
-		fail("Not yet implemented");
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("one");
+		assertEquals(2, stringList.lastIndexOf("one"));
 	}
 
 	@Test
