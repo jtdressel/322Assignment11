@@ -155,7 +155,16 @@ public class ForwardingListTest {
 
 	@Test
 	public void testRemoveObject() {
-		fail("Not yet implemented");
+		assertFalse(stringList.contains("one"));
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("one");//"one" is in index 0 and 2
+		assertTrue(stringList.contains("one"));
+		stringList.remove("one");//should remove "one" from index 0, making two be in 0, and one in 1
+		assertEquals(1,stringList.indexOf("one"));//if false then it removed the last object instead of the first
+		stringList.remove("one");//no more "one"
+		assertFalse(stringList.contains("one"));
+		
 	}
 
 	@Test
@@ -180,7 +189,14 @@ public class ForwardingListTest {
 
 	@Test
 	public void testSize() {
-		fail("Not yet implemented");
+		assertEquals(0, stringList.size());//Start out empty
+		stringList.add("one");
+		assertEquals(1, stringList.size());
+		stringList.add("two");
+		assertEquals(2, stringList.size());
+		stringList.remove("two");
+		assertEquals(1, stringList.size());
+		
 	}
 
 	@Test
