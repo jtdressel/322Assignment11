@@ -200,8 +200,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return l.size();
 	}
 	/**
 	 * Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
