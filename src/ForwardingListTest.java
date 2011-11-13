@@ -242,7 +242,21 @@ public class ForwardingListTest {
 
 	@Test
 	public void testSubList() {
-		fail("Not yet implemented");
+		stringList.add("zero");
+		stringList.add("one");
+		stringList.add("two");
+		stringList.add("three");
+		stringList.add("four");
+		stringList.add("five");
+		
+		LinkedList<String> testList = new LinkedList<String>();
+		
+		testList.add("two");
+		testList.add("three");
+		testList.add("four");
+		
+		assertEquals(testList, stringList.subList(2, 5));
+		
 	}
 
 	@Test
