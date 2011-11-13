@@ -123,8 +123,8 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public int lastIndexOf(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return l.lastIndexOf(o);
 	}
 	/**
 	 * Returns a list iterator over the elements in this list (in proper sequence).
@@ -192,7 +192,7 @@ public class ForwardingList<E> implements List<E>{
 	 */
 	@Override
 	public E set(int index, E element) {
-		// TODO Auto-generated method stub
+		
 		return l.set(index, element);
 	}
 	/**
