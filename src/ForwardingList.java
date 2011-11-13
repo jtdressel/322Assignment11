@@ -237,12 +237,12 @@ public class ForwardingList<E> implements List<E>{
 	
 	@Override
 	public boolean equals(Object o){
-		return false;//TODO
+		return l.equals(o);
 	}
 	
 	@Override
 	public int hashCode(){
-		return 42;
+		return 42;//TODO
 	}
 	
 	
