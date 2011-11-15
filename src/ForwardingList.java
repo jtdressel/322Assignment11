@@ -15,7 +15,7 @@ public class ForwardingList<E> implements List<E>{
 	
 	
 	
-//TODO Ask about override notation
+
 	/**
 	 * Appends the specified element to the end of this list (optional operation)
 	 * @return false if operation is unsucessful
@@ -242,8 +242,8 @@ public class ForwardingList<E> implements List<E>{
 	
 	@Override
 	public int hashCode(){
-		return 42;//TODO
-	}
+		return l.hashCode();
+		}
 	
 	
 
