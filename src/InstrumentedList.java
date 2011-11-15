@@ -11,7 +11,10 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	public InstrumentedList(List<E> l){
 		super(l);
 	}
-	
+	/**
+	 * Appends the specified element to the end of this list.
+	 * @param e element to add
+	 */
 	@Override public boolean add(E e){
 		addCount++;
 		return super.add(e);
@@ -38,11 +41,29 @@ public class InstrumentedList<E> extends ForwardingList<E> {
 	
 	@Override
 	public boolean equals(Object o){
+		if(o instanceof InstrumentedList){
+			if(super.equals(o)){
+				InstrumentedList e = (InstrumentedList)o;
+				if(this.addCount==e.addCount){
+					return true;
+				}
+				
+			} else {
+				return false;
+			}
+		} else{
+			return false;
+		}
 		return false;
+		
+		
+
 	}
 	
 	@Override
 	public int hashCode(){
-		return 45;
+		int result = super.hashCode();
+		result = result * 31 + addCount;
+		return result;
 	}
 }
