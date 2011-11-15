@@ -97,10 +97,9 @@ public class InstrumentedListTest {
 	public void testHashCode(){
 		LinkedList<String> first = new LinkedList<String>();
 		LinkedList<String> second = new LinkedList<String>();
-		LinkedList<String> third = new LinkedList<String>();
 		InstrumentedList<String> firstList = new InstrumentedList<String>(first);
 		InstrumentedList<String> secondList = new InstrumentedList<String>(second);	
-		InstrumentedList<String> thirdList = new InstrumentedList<String>(third);
+
 		
 		firstList.add("one");
 		firstList.add("two");
