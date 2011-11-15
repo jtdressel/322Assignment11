@@ -62,8 +62,57 @@ public class InstrumentedListTest {
 		
 	}
 	
+	@Test
+	public void testEquals(){
+		LinkedList<String> first = new LinkedList<String>();
+		LinkedList<String> second = new LinkedList<String>();
+		LinkedList<String> third = new LinkedList<String>();
+		InstrumentedList<String> firstList = new InstrumentedList<String>(first);
+		InstrumentedList<String> secondList = new InstrumentedList<String>(second);	
+		InstrumentedList<String> thirdList = new InstrumentedList<String>(third);
+		
+		firstList.add("one");
+		firstList.add("two");
+		firstList.add("three");
+		secondList.add("one");
+		secondList.add("two");
+		assertFalse(firstList.equals(secondList));
+		secondList.add("three");
+		assertTrue(firstList.equals(secondList));//Symetry
+		assertTrue(secondList.equals(firstList));
+		thirdList.add("one");
+		thirdList.add("two");
+		thirdList.add("three");
+		assertTrue(secondList.equals(thirdList));
+		assertTrue(firstList.equals(thirdList));//Transitive
+		
+		secondList.remove("three");
+		secondList.add("three");
+		assertFalse(firstList.equals(secondList));//should nolonger be equal because of add count
+		
+		
+	}
 	
-	
+	@Test
+	public void testHashCode(){
+		LinkedList<String> first = new LinkedList<String>();
+		LinkedList<String> second = new LinkedList<String>();
+		LinkedList<String> third = new LinkedList<String>();
+		InstrumentedList<String> firstList = new InstrumentedList<String>(first);
+		InstrumentedList<String> secondList = new InstrumentedList<String>(second);	
+		InstrumentedList<String> thirdList = new InstrumentedList<String>(third);
+		
+		firstList.add("one");
+		firstList.add("two");
+		secondList.add("one");
+		secondList.add("two");
+		
+		assertTrue(firstList.equals(secondList));//If equals is broken, can't test hashcode
+		
+		assertEquals(firstList.hashCode(),secondList.hashCode());
+		
+		
+	}
 	
 
 }
