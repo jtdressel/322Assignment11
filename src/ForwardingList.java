@@ -13,8 +13,6 @@ public class ForwardingList<E> implements List<E>{
 	private final List<E> l;
 	public ForwardingList(List<E> l) {this.l = l;}
 	
-	
-	
 
 	/**
 	 * Appends the specified element to the end of this list (optional operation)
