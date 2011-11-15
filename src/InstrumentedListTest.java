@@ -51,7 +51,7 @@ public class InstrumentedListTest {
 		
 		
 		int count = iList.getAddCount();
-		Collection toAdd = new LinkedList();
+		Collection<String> toAdd = new LinkedList<String>();
 		toAdd.add("one");
 		toAdd.add("two");
 		toAdd.add("three");
@@ -61,6 +61,7 @@ public class InstrumentedListTest {
 		
 		
 	}
+	
 	
 	
 	
