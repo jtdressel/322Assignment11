@@ -10,18 +10,25 @@ import org.junit.Before;
 
 public class InstrumentedListTest {
 	private InstrumentedList<String> iList = null;
-	
+	/**
+	 * Prepares a n InstrumentedList object used in many of the tests. 
+	 */
 	@Before public void setUp(){
 		LinkedList stringLinkedList = new LinkedList<String>();
 		iList = new InstrumentedList<String>(stringLinkedList);
 	}
-	
+	/**
+	 * Adds an element, and tests to see that the count has been increased. 
+	 */
 	@Test
 	public void testAddE() {
 		int count = iList.getAddCount();
 		iList.add("one");
 		assertTrue(count+1==iList.getAddCount());//Adding should increase the count by one
 	}
+	/**
+	 * Adds several elements, and tests to see that the count has been increased.
+	 */
 	@Test
 	public void testAddAllCollection() {
 		int count = iList.getAddCount();
@@ -32,17 +39,21 @@ public class InstrumentedListTest {
 		iList.addAll(toAdd);
 		assertTrue(count+toAdd.size()==iList.getAddCount());
 	}
+	/**
+	 * Adds an element at a position and tests the count to see if it was increased.
+	 */
 	@Test
 	public void testAddIndexElement() {
 		int count = iList.getAddCount();
 		iList.add("one");
 		iList.add("three");
 		iList.add(1, "two");
-		
-		
 		assertTrue(count+3==iList.getAddCount());//Adding should increase the count by one
 
 	}
+	/**
+	 * Adds several elements at a position, and tests count. 
+	 */
 	@Test
 	public void testAddAllIndexCollection() {
 		iList.add("a");
@@ -61,7 +72,9 @@ public class InstrumentedListTest {
 		
 		
 	}
-	
+	/**
+	 * tests logical equlaity with several InstrumentedLIsts
+	 */
 	@Test
 	public void testEquals(){
 		LinkedList<String> first = new LinkedList<String>();
@@ -92,7 +105,9 @@ public class InstrumentedListTest {
 		
 		
 	}
-	
+	/**
+	 * tests hashcode with several InstrumentedLIsts
+	 */
 	@Test
 	public void testHashCode(){
 		LinkedList<String> first = new LinkedList<String>();
